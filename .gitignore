@@ -1,3 +1,5 @@
+# Python files
+api-server/venv
 # Logs
 logs
 *.log
