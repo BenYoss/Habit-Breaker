@@ -1,0 +1,16 @@
+body {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.icon {
+    border-radius: 50%;
+}
+.edit_btn {
+    cursor:pointer;
+}

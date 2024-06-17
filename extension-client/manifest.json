@@ -1,0 +1,38 @@
+{
+    "name": "Habit Breaker",
+    "version": "0.1.0",
+    "description": "Uses gen AI to break habits.",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/bookmark.png",
+          "assets/play.png",
+          "assets/delete.png",
+          "assets/save.png"
+        ],
+        "matches": ["https://*.youtube.com/*"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "images/ext-icon16.png",
+        "24": "images/ext-icon24.png",
+        "32": "images/ext-icon32.png"
+      },
+      "default_title": "Habit Breaker"
+    },
+    "manifest_version": 3
+}
